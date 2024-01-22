@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Packages\**" />
+    <EmbeddedResource Remove="Packages\**" />
+    <None Remove="Packages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Common" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="libzkfpcsharp">
+      <HintPath>Packages\libzkfpcsharp\x86\libzkfpcsharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
